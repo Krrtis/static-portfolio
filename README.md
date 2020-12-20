@@ -1,3 +1,3 @@
 # static-portfolio
 
-quickly made version of a portfolio site using semantic ui
+quickly made version of a portfolio site using semantic ui.
