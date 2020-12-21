@@ -161,6 +161,12 @@
 
 				// create sidebar and attach to menu open
 				$('.ui.sidebar').sidebar('attach events', '.toc.item');
+
+				// on click events to set active nav elements
+				$('.item').on('click', function () {
+					$('.item.active').removeClass('active');
+					$(this).addClass('active');
+				});
 			});
 		</script>
 	</head>
@@ -168,7 +174,7 @@
 		<!-- NAV MENU FIXED-TOP START -->
 		<div class="ui inverted large top fixed hidden menu">
 			<div class="ui text container">
-				<a class="active item">Home</a>
+				<a class="item active">Home</a>
 				<a class="item" href="#section_who">Who</a>
 				<a class="item" href="#section_projects">Projects</a>
 				<a class="item" href="#section_skills">Skills</a>
@@ -178,7 +184,7 @@
 
 		<!-- SIDEBAR MENU START -->
 		<div class="ui vertical inverted sidebar menu">
-			<a class="active item">Home</a>
+			<a class="item active">Home</a>
 			<a class="item" href="#section_who">Who</a>
 			<a class="item" href="#section_projects">Projects</a>
 			<a class="item" href="#section_skills">Skills</a>
@@ -196,7 +202,7 @@
 						<a class="toc item">
 							<i class="material-icons">menu</i>
 						</a>
-						<a class="active item">Home</a>
+						<a class="item active">Home</a>
 						<a class="item" href="#section_who">Who</a>
 						<a class="item" href="#section_projects">Projects</a>
 						<a class="item" href="#section_skills">Skills</a>
@@ -317,7 +323,12 @@
 					</div>
 					<h3 class="ui header">Resume</h3>
 					<p>See my resume for more information on what I know.</p>
-					<a class="ui large button">Access my resume</a>
+					<a
+						class="ui large button"
+						href="./resources/resume2020.pdf"
+						target="_blank"
+						>Access my resume</a
+					>
 					<!-- SKILL SECTION END -->
 					<div class="ui section divider"></div>
 					<!-- PROJECTS SECTION START -->
